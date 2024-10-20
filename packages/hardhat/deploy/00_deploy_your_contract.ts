@@ -1,14 +1,13 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-import { Contract } from "ethers";
 
 /**
- * Deploys a contract named "YourContract" using the deployer account and
+ * Deploys a contract named "SmartBridge" using the deployer account and
  * constructor arguments set to the deployer address
  *
  * @param hre HardhatRuntimeEnvironment object.
  */
-const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const deploySmartBridge: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   /*
     On localhost, the deployer account is the one that comes with Hardhat, which is already funded.
 
@@ -22,10 +21,11 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  await deploy("YourContract", {
+  await deploy("SmartBridge", {
     from: deployer,
     // Contract constructor arguments
-    args: [deployer],
+    // args: ["0x9E12AD42c4E4d2acFBADE01a96446e48e6764B98", "0x6C7Ab2202C98C4227C5c46f1417D81144DA716Ff"], // For Morph HoleSky
+    args: ["0x9aA40Cc99973d8407a2AE7B2237d26E615EcaFd2", "0x6EDCE65403992e310A62460808c4b910D972f10f"], // For Arbitrum Sepolia
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.
@@ -33,12 +33,12 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   });
 
   // Get the deployed contract to interact with it after deploying.
-  const yourContract = await hre.ethers.getContract<Contract>("YourContract", deployer);
-  console.log("👋 Initial greeting:", await yourContract.greeting());
+  // const SmartBridge = await hre.ethers.getContract<Contract>("SmartBridge", deployer);
+  // console.log("👋 Initial greeting:", await SmartBridge.greeting());
 };
 
-export default deployYourContract;
+export default deploySmartBridge;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
-// e.g. yarn deploy --tags YourContract
-deployYourContract.tags = ["YourContract"];
+// e.g. yarn deploy --tags SmartBridge
+deploySmartBridge.tags = ["SmartBridge"];

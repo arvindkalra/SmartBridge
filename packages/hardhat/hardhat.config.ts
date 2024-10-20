@@ -53,6 +53,10 @@ const config: HardhatUserConfig = {
       url: `https://cloudflare-eth.com`,
       accounts: [deployerPrivateKey],
     },
+    morphHolesky: {
+      url: `https://rpc-holesky.morphl2.io`,
+      accounts: [deployerPrivateKey],
+    },
     sepolia: {
       url: `https://rpc2.sepolia.org`,
       accounts: [deployerPrivateKey],

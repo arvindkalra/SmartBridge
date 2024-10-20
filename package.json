@@ -42,5 +42,9 @@
   },
   "engines": {
     "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "@layerzerolabs/lz-evm-protocol-v2": "^3.0.6",
+    "@layerzerolabs/oapp-evm": "^0.0.4"
   }
 }

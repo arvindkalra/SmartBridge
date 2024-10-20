@@ -895,6 +895,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@layerzerolabs/lz-evm-protocol-v2@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@layerzerolabs/lz-evm-protocol-v2@npm:3.0.6"
+  peerDependencies:
+    "@openzeppelin/contracts": ^4.8.1 || ^5.0.0
+    "@openzeppelin/contracts-upgradeable": ^4.8.1 || ^5.0.0
+    hardhat-deploy: ^0.12.4
+    solidity-bytes-utils: ^0.8.0
+  checksum: 8e2597df1bc41bba325c8d11e4337cbf2ffacb56f07c637d52bc27ac46bb80d19f7ab427808d2d76815341916beb55d51b69059f4d4d5f6977d0d7bf6507a7e1
+  languageName: node
+  linkType: hard
+
+"@layerzerolabs/oapp-evm@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@layerzerolabs/oapp-evm@npm:0.0.4"
+  dependencies:
+    ethers: ^5.7.2
+  peerDependencies:
+    "@layerzerolabs/lz-evm-messagelib-v2": ^2.3.39
+    "@layerzerolabs/lz-evm-protocol-v2": ^2.3.39
+    "@layerzerolabs/lz-evm-v1-0.7": ^2.3.39
+    "@openzeppelin/contracts": ^4.8.1 || ^5.0.0
+    "@openzeppelin/contracts-upgradeable": ^4.8.1 || ^5.0.0
+  checksum: 96e0f933946aeb031fa080a1c59d4b57b4c84905e46fae949a6d6de665263b5990481b0c0dae0fe5405a84f697850e6322256d217c229305317312f23eb625cc
+  languageName: node
+  linkType: hard
+
 "@lit-labs/ssr-dom-shim@npm:^1.0.0, @lit-labs/ssr-dom-shim@npm:^1.1.0":
   version: 1.1.1
   resolution: "@lit-labs/ssr-dom-shim@npm:1.1.1"
@@ -6849,7 +6876,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethers@npm:^5.7.0, ethers@npm:~5.7.0":
+"ethers@npm:^5.7.0, ethers@npm:^5.7.2, ethers@npm:~5.7.0":
   version: 5.7.2
   resolution: "ethers@npm:5.7.2"
   dependencies:
@@ -11897,6 +11924,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "se-2@workspace:."
   dependencies:
+    "@layerzerolabs/lz-evm-protocol-v2": ^3.0.6
+    "@layerzerolabs/oapp-evm": ^0.0.4
     husky: ^8.0.1
     lint-staged: ^13.0.3
   languageName: unknown
